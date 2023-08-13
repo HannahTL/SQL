@@ -1,0 +1,41 @@
+CREATE TABLE beauty (
+id INTEGER PRIMARY KEY, 
+name TEXT, 
+price INTEGER, 
+category TEXT, 
+rating INTEGER); 
+
+INSERT INTO beauty (id, name, price, category, rating) VALUES
+(1, 'cleanser', 19.00, 'skin_care', 4.9), 
+(2, 'lotion', 10.12, 'skin_care', 3.9),
+(3, 'mascara', 6.45, 'make_up', 4.3),
+(4, 'lipstick', 4.87, 'make_up', 3.4),
+(5, 'serum', 30.56, 'skin_care', 3.0),
+(6, 'sunscreen', 14, 'skin_care', 4.6),
+(7, 'blush', 5.00, 'make_up', 5),
+(8, 'eyeliner', 9.00, 'make_up', 4.5),
+(9, 'powder', 10.00, 'make_up', 3.6),
+(10, 'treatment', 50.99, 'skin_care', 4.5),
+(11, 'lip_gloss', 6.76, 'make_up', 5),
+(12, 'deodarant', 6.87, 'skin_care', 4.3),
+(13, 'setting_spray', 14.00, 'make_up', 2.4),
+(14, 'brows_pencil', 4.12, 'make_up', 4.9),
+(15, 'scrubs', 5.45, 'skin_carer', 5);
+
+---Write your own SQL query that will use a SELECT statement to order the items by price.  
+
+SELECT *
+FROM beauty
+ORDER BY price desc;
+
+---Write your own SQL query that will show a statistic about the item prices. 
+
+SELECT AVG(price)
+FROM beauty;
+
+---Write your own SQL query that will show a statistic about the rating of product in the 'skin_care' category.  
+
+SELECT MAX(rating)
+FROM beauty
+WHERE category='skin_care';
+
